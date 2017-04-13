@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Taskapp</title>
-    <%= csrf_meta_tags %>
+<head>
+  <title>Taskapp</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+<%= image_tag "logo.png" %>
 
-  <body>
-    <%= yield %>
-  </body>
+<%= yield %>
+
+<%= link_to "Home", projects_path %>
+
+</body>
 </html>
